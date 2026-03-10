@@ -6,8 +6,12 @@ To deploy daemonset.yml and cronjob.yml use commands:
 
     kubectl apply -f cronjob.yml
 
-To watch logs use command:
+To watch logs use commands:
 
-    kubectl logs <daemonset_name>
+    To see pod's names use command:
 
-    kubectl logs <cronjob_name>
+        kubectl get podes
+
+    kubectl logs <daemonset_pod_name>
+
+    kubectl logs <cronjob_pod_name>
