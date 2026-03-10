@@ -10,7 +10,7 @@ To watch logs use commands:
 
     To see pod's names use command:
 
-        kubectl get podes
+        kubectl get pods
 
     kubectl logs <daemonset_pod_name>
 

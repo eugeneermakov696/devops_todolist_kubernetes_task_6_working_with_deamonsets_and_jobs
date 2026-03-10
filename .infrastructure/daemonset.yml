@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: todoapp
-        image: eug696/todoapp:3.0.0
+        image: busyboxplus:curl
         resources:
           requests:
             memory: "256Mi"
@@ -22,5 +22,4 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "150m"
-        command:
-        - while true; do curl -s http://todoapp-service.todoapp.svc.cluster.local; sleep 5; done;
+        command:["/bin/sh", "-c", "while true; do curl http://todoapp-service.todoapp.svc.cluster.local; sleep 5; done"]
